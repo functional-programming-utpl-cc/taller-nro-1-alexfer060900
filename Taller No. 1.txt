@@ -1,0 +1,24 @@
+countries = List("Ecuador", "Venezuela", "Colombia", "Perú", "Chile", "Argentina", "Uruguay", "Paraguay", "Brasil")
+
+- 1era Pregunta
+ countries.filter(_.startsWith("C"))
+res2: List[String] = List(Colombia, Chile)
+
+- 2da Pregunta 
+
+ countries.filter(_.contains("E"))
+res3: List[String] = List(Ecuador)
+
+- 3era Pregunta
+countries.filter(_.startsWith("E") || _.contains("I"))
+
+
+- 4ta Pregunta
+countries.filter(_.length > 5)
+res14: List[String] = List(Ecuador, Venezuela, Colombia, Argentina, Uruguay, Paraguay, Brasil)
+
+- 5ta Pregunta
+val numbers = List(10, 11, 12, 18, 20, 50, 60, 80, 81, 96)
+
+numbers.filter(y => (1 until y).toList.filter(y % _ == 0).sum < y)
+res19: List[Int] = List(10, 11, 50, 81)
